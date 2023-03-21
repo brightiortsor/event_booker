@@ -1,5 +1,3 @@
-// import styles from "@/styles/Home.module.css";
-
 // const Home = () => {
 //   return (
 //     <>
@@ -12,7 +10,7 @@
 
 // export default Home;
 import Head from "next/head";
-// import { HomePage } from "../src/components/home/home-page";
+import { HomePage } from "../src/components/home/home-page";
 
 export default function Home({ data }) {
   return (
@@ -23,7 +21,7 @@ export default function Home({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <HomePage data={data} /> */}
+      <HomePage data={data} />
     </div>
   );
 }
