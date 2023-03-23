@@ -4,11 +4,12 @@ import styles from "../styles/PizzaCard.module.css";
 const PizzaCard = () => {
   return (
     <div className={styles.container}>
-      <Image src="/img/pizza.png" alt="" width="500" height="500" />
-      <h1 className={styles.title}>FIORI DI ZUCCA</h1>
-      <span className={styles.price}>$19.90</span>
+      <Image src="/images/pizza.webp" alt="" width="500" height="500" />
+      <h1 className={styles.title}>Cheeseburger Pizza</h1>
+      <span className={styles.price}>N4,500</span>
       <p className={styles.desc}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Beef, tomatoes, red onions, cheddar, mozzarella, tomato sauce,
+        mayonnaise, ketchup, peri peri
       </p>
     </div>
   );
