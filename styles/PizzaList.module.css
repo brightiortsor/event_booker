@@ -5,10 +5,17 @@
   align-items: center;
 }
 
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #635f5e;
+  margin-bottom: 10px;
+}
 .desc {
   font-size: 24px;
   color: #444;
   width: 70%;
+  margin: 1rem 0 1.5rem 0;
 }
 
 .wrapper {
@@ -19,13 +26,23 @@
   flex-wrap: wrap;
 }
 
+@media screen and (max-width: 968px) {
+  .desc {
+  width: 90%;
+}
+}
+
 @media screen and (max-width: 480px) {
   .title {
     text-align: center;
+    font-size: 1.8rem;
   }
 
   .desc {
     width: 90%;
     text-align: center;
+    font-size: 1.2rem;
+    margin: 0.8rem 0;
+
   }
 }

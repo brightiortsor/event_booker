@@ -9,10 +9,16 @@
   cursor: pointer;
 }
 
+.container:hover {
+  transform: scale(1.02);
+  transition: all 0.5s ease-in-out;
+}
 .title {
   font-size: 18px;
   font-weight: bold;
   color: #d1411e;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .price {
@@ -26,17 +32,29 @@
   color: #777;
 }
 
+@media screen and (max-width: 968px) {
+  .container {
+    width: 33%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 50%;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .container {
     width: 100%;
   }
 
   .title {
-    font-size: 30px;
+    font-size: 1.5rem;
   }
 
   .price,
   .desc {
-    font-size: 24px;
+    font-size: 1.3rem;
   }
 }

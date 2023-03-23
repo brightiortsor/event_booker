@@ -4,7 +4,13 @@ import styles from "../styles/PizzaCard.module.css";
 const PizzaCard = () => {
   return (
     <div className={styles.container}>
-      <Image src="/images/pizza.webp" alt="" width="500" height="500" />
+      <Image
+        src="/images/pizza.webp"
+        alt=""
+        width="200"
+        height="200"
+        className={styles.img}
+      />
       <h1 className={styles.title}>Cheeseburger Pizza</h1>
       <span className={styles.price}>N4,500</span>
       <p className={styles.desc}>
