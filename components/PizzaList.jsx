@@ -8,7 +8,7 @@ const PizzaList = () => {
       <p className={styles.desc}>
         World&apos;s largest & best pizza in Nigeria! Delivering hot, fresh
         pizzas to your doorstep within 30mins and take away in all our stores in
-        Abuja&apos;ss largest & best pizza in Nigeria! Delivering hot, fresh
+        Abuja&apos;s largest & best pizza in Nigeria! Delivering hot, fresh
         pizzas to your doorstep within 30mins and take away in all our stores in
         Abuja.
       </p>
