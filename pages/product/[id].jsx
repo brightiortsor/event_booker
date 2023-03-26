@@ -9,14 +9,20 @@ const Product = () => {
     img: "/images/pizza.webp",
     name: "CAMPAGNOLA",
     price: [19.9, 23.9, 27.9],
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis arcu purus, rhoncus fringilla vestibulum vel, dignissim vel ante. Nulla facilisi. Nullam a urna sit amet tellus pellentesque egestas in in ante.",
+    desc: "Campagnola is a classic Italian pizza with a tomato sauce, mozzarella, and fresh basil. It is a simple pizza that is perfect for those who like a simple, yet delicious pizza.",
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.left}>
         <div className={styles.imgContainer}>
-          <Image src={pizza.img} width={400} height={400} alt="" />
+          <Image
+            src={pizza.img}
+            width={400}
+            height={400}
+            alt=""
+            className={styles.img}
+          />
         </div>
       </div>
       <div className={styles.right}>
