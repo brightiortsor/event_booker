@@ -49,7 +49,9 @@ const Footer = () => {
               <FaLinkedin />
             </span>
           </div>
-          <p className={styles.phone}>080SPICYPIZZA</p>
+          <div className={styles.socials}>
+            <p className={styles.phone}>080SPICYPIZZA</p>
+          </div>
         </div>
       </div>
       <div className={styles.hours}>
