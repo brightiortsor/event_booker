@@ -65,7 +65,10 @@ margin-top: 2rem;
 }
 .cardContent {
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 1rem;
+    gap: 1rem;
 }
 .title {
   font-size: 18px;
@@ -76,7 +79,7 @@ margin-top: 2rem;
 
 .text {
   color: lightgray;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 @media screen and (max-width: 760px) {

@@ -19,20 +19,14 @@ const Footer = () => {
         <div className={styles.cardContainer}>
           <div className={styles.cardContent}>
             <p className={styles.text}>
-              1654 R. Don Road.
+              1654 Usuma Close,
               <br /> Maitama, 85022
               <br /> (602) 867-1010
             </p>
             <p className={styles.text}>
-              2356 K. Laquie Rd.
+              2356 Laquie Rd.
               <br /> WuseII, 85022
               <br /> (602) 867-1011
-            </p>
-            <p className={styles.text}>
-              1614 E. Erwin St.
-              <br />
-              Jabi, 85022
-              <br /> (602) 867-1012
             </p>
           </div>
           <div className={styles.socials}>
