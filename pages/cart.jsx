@@ -1,4 +1,4 @@
-// import styles from "../styles/Cart.module.css";
+import styles from "../styles/Cart.module.css";
 import Image from "next/image";
 
 const Cart = () => {
@@ -17,12 +17,7 @@ const Cart = () => {
           <tr className={styles.tr}>
             <td>
               <div className={styles.imgContainer}>
-                <Image
-                  src="/images/pizza.png"
-                  width={400}
-                  height={400}
-                  alt=""
-                />
+                <Image src="/images/pizza.png" fill alt="" />
               </div>
             </td>
             <td>
@@ -46,12 +41,31 @@ const Cart = () => {
           <tr className={styles.tr}>
             <td>
               <div className={styles.imgContainer}>
-                <Image
-                  src="/images/pizza.png"
-                  width={400}
-                  height={400}
-                  alt=""
-                />
+                <Image src="/images/pizza.png" fill alt="" />
+              </div>
+            </td>
+            <td>
+              <span className={styles.name}>CORALZO</span>
+            </td>
+            <td>
+              <span className={styles.extras}>
+                Double ingredient, spicy sauce
+              </span>
+            </td>
+            <td>
+              <span className={styles.price}>$19.90</span>
+            </td>
+            <td>
+              <span className={styles.quantity}>2</span>
+            </td>
+            <td>
+              <span className={styles.total}>$39.80</span>
+            </td>
+          </tr>
+          <tr className={styles.tr}>
+            <td>
+              <div className={styles.imgContainer}>
+                <Image src="/images/pizza.png" fill alt="" />
               </div>
             </td>
             <td>
@@ -86,7 +100,7 @@ const Cart = () => {
           <div className={styles.totalText}>
             <b className={styles.totalTextTitle}>Total:</b>$79.60
           </div>
-          <button className={styles.button}>CHECKOUT NOW!</button>
+          <button className={styles.button}>CHECKOUT</button>
         </div>
       </div>
     </div>
