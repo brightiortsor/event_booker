@@ -33,6 +33,10 @@
  
 }
 
+.naira {
+  text-decoration: line-through;
+  padding-right: 3px;
+}
 .desc {
     margin: 20px 0;
     font-size: 18px;
