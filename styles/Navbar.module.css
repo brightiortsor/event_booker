@@ -57,6 +57,26 @@ justify-self: flex-end;
   margin: 20px;
   font-weight: 500;
   cursor: pointer;
+    position: relative;
+}
+
+
+.listItem:focus::after {
+  background-color: white;
+}
+.listItem:hover {
+  color: #ccbfbf;
+  transition: all 0.3s ease-in-out;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background-color: white;
 }
 
 .cart{
@@ -94,6 +114,9 @@ justify-self: flex-end;
   cursor: pointer;
 }
 
+.close {
+  color: #fff;
+}
 .hamburgerLine {
   height: 3px;
   width: 100%;
@@ -132,6 +155,7 @@ justify-self: flex-end;
    
  .hamburgerMenu {
   display: block;
+  margin-left: 2rem;
 }
   .list {
     display: none;
@@ -142,6 +166,7 @@ justify-self: flex-end;
     top: 100%;
      background: #d1411e;
   }
+
 }
 
 @media screen and (max-width:480px) {

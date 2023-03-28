@@ -1,9 +1,15 @@
 import Image from "next/image";
 import styles from "../styles/Navbar.module.css";
 import { useState } from "react";
+import { FaTimes } from "react-icons/fa";
+import Link from "next/link";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [active, setActive] = useState("Home");
+  const handleSetActive = (item) => {
+    setActive(item);
+  };
 
   return (
     <div className={styles.container}>
@@ -18,11 +24,47 @@ const Navbar = () => {
       </div>
       <div className={styles.item}>
         <ul className={styles.list}>
-          <li className={styles.listItem}>HOME</li>
-          <li className={styles.listItem}>Products</li>
-          <li className={styles.listItem}>Menu</li>
-          <li className={styles.listItem}>Blog</li>
-          <li className={styles.listItem}>Contact</li>
+          <li
+            className={`${styles.listItem} ${
+              active === "Home" ? styles.active : ""
+            }`}
+            onClick={() => handleSetActive("Home")}
+          >
+            <Link href="/">HOME</Link>
+          </li>
+          <li
+            className={`${styles.listItem} ${
+              active === "Products" ? styles.active : ""
+            }`}
+            onClick={() => handleSetActive("Products")}
+          >
+            <Link href="/">Products</Link>
+          </li>
+          <li
+            className={`${styles.listItem} ${
+              active === "Menu" ? styles.active : ""
+            }`}
+            onClick={() => handleSetActive("Menu")}
+          >
+            <Link href="/">Menu</Link>
+          </li>
+
+          <li
+            className={`${styles.listItem} ${
+              active === "Blog" ? styles.active : ""
+            }`}
+            onClick={() => handleSetActive("Blog")}
+          >
+            <Link href="/">Blog</Link>
+          </li>
+          <li
+            className={`${styles.listItem} ${
+              active === "Contact" ? styles.active : ""
+            }`}
+            onClick={() => handleSetActive("Contact")}
+          >
+            <Link href="/">Contact</Link>
+          </li>
         </ul>
       </div>
       <div className={styles.items}>
@@ -45,9 +87,9 @@ const Navbar = () => {
         >
           {menuOpen ? (
             <>
-              <div className={`${styles.hamburgerLine} ${styles.line1}`}></div>
-              <div className={`${styles.hamburgerLine} ${styles.line2}`}></div>
-              <div className={`${styles.hamburgerLine} ${styles.line3}`}></div>
+              <div className={styles.close}>
+                <FaTimes size={30} />
+              </div>
             </>
           ) : (
             <>
@@ -62,11 +104,46 @@ const Navbar = () => {
           style={{ display: menuOpen ? "flex" : "none" }}
         >
           <ul className={styles.hamburgerList}>
-            <li className={styles.listItem}>HOME</li>
-            <li className={styles.listItem}>Products</li>
-            <li className={styles.listItem}>Menu</li>
-            <li className={styles.listItem}>Blog</li>
-            <li className={styles.listItem}>Contact</li>
+            <li
+              className={`${styles.listItem} ${
+                active === "Home" ? styles.active : ""
+              }`}
+              onClick={() => handleSetActive("Home")}
+            >
+              <Link href="/">HOME</Link>
+            </li>
+            <li
+              className={`${styles.listItem} ${
+                active === "Products" ? styles.active : ""
+              }`}
+              onClick={() => handleSetActive("Products")}
+            >
+              <Link href="/">Products</Link>
+            </li>
+            <li
+              className={`${styles.listItem} ${
+                active === "Menu" ? styles.active : ""
+              }`}
+              onClick={() => handleSetActive("Menu")}
+            >
+              <Link href="/">Menu</Link>
+            </li>
+            <li
+              className={`${styles.listItem} ${
+                active === "Blog" ? styles.active : ""
+              }`}
+              onClick={() => handleSetActive("Blog")}
+            >
+              <Link href="/">Blog</Link>
+            </li>
+            <li
+              className={`${styles.listItem} ${
+                active === "Contact" ? styles.active : ""
+              }`}
+              onClick={() => handleSetActive("Contact")}
+            >
+              <Link href="/">Contact</Link>
+            </li>
           </ul>
         </div>
       </div>
