@@ -1,22 +1,22 @@
 import Image from "next/image";
 import styles from "../styles/PizzaCard.module.css";
+import Link from "next/link";
 
-const PizzaCard = () => {
+const PizzaCard = ({ pizza }) => {
   return (
     <div className={styles.container}>
-      <Image
-        src="/images/pizza.webp"
-        alt=""
-        width="200"
-        height="200"
-        className={styles.img}
-      />
-      <h1 className={styles.title}>Cheeseburger Pizza</h1>
-      <span className={styles.price}>N4,500</span>
-      <p className={styles.desc}>
-        Beef, tomatoes, red onions, cheddar, mozzarella, tomato sauce,
-        mayonnaise, ketchup, peri peri
-      </p>
+      <Link href={`/product/${pizza._id}`} passHref>
+        <Image
+          src={pizza.img}
+          alt=""
+          width="200"
+          height="200"
+          className={styles.img}
+        />
+      </Link>
+      <h1 className={styles.title}>{pizza.title}</h1>
+      <span className={styles.price}>${pizza.prices[0]}</span>
+      <p className={styles.desc}>{pizza.desc}</p>
     </div>
   );
 };
