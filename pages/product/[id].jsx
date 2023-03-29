@@ -1,18 +1,19 @@
 import styles from "../../styles/Product.module.css";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { pizzadata } from "../../data";
+
+const pizza = {
+  id: 1,
+  img: "/images/pizza.webp",
+  name: "CAMPAGNOLA",
+  price: [3500, 5000, 7500],
+  desc: "Campagnola is a classic Italian pizza with a tomato sauce, mozzarella, and fresh basil. It is a simple pizza that is perfect for those who like a simple, yet delicious pizza.",
+};
 
 const Product = () => {
   const [size, setSize] = useState(0);
   const [ingredients, setIngredients] = useState([]);
-
-  const pizza = {
-    id: 1,
-    img: "/images/pizza.webp",
-    name: "CAMPAGNOLA",
-    price: [3500, 5000, 7500],
-    desc: "Campagnola is a classic Italian pizza with a tomato sauce, mozzarella, and fresh basil. It is a simple pizza that is perfect for those who like a simple, yet delicious pizza.",
-  };
 
   const handleIngredients = (event) => {
     const ingredient = event.target.name;
@@ -47,10 +48,11 @@ const Product = () => {
       <div className={styles.right}>
         <h1 className={styles.title}>{pizza.name}</h1>
         <span className={styles.price}>
-          <span className={styles.naira}>N</span>
+          <span>$</span>
           {pizzaPrice}
         </span>
         <p className={styles.desc}>{pizza.desc}</p>
+
         <h3 className={styles.choose}>Choose the size</h3>
         <div className={styles.sizes}>
           <div className={styles.size} onClick={() => setSize(0)}>
